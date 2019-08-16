@@ -1,0 +1,16 @@
+<div class="card book-checkout">
+    <div class="row no-gutters">
+        <div class="col-md-4">
+            <img src="{{ item.gambar }}" class="card-img" onerror="this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT79VFiIQHdxL5w8RM8t41Ec8rGuxksuXZN-mdvs0LujztybzqI'">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <h5 class="card-title">
+                    <a href="#/book/{{item.id}}">{{ item.judul }}</a>
+                </h5>
+                <p class="card-text font-weight-bold">{{ item.harga | rupiah }}</p>
+                <input type="number" class="form-control" ng-model="item.quantity">
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+<div ng-controller="CheckoutController as checkout">
+    <div ng-if="checkout.list.length && !main.checkouted" class="row">
+        <div class="col-md-7">
+            <div book-checkout ng-repeat="item in checkout.list"></div>
+        </div>
+        <div class="col-md-5">
+            <form>
+                <div class="form-group">
+                    <label for="name">Nama</label>
+                    <input type="name" class="form-control" id="name" placeholder="Masukkan Nama">
+                </div>
+                <div class="form-group">
+                    <label for="address">Alamat</label>
+                    <input type="address" class="form-control" id="address" placeholder="Masukkan Alamat">
+                </div>
+                <div class="form-group">
+                    <label for="no">No. Telepon</label>
+                    <input type="no" class="form-control" id="no" placeholder="Masukkan No. Telepon">
+                </div>
+                <button type="submit" class="btn btn-success w-100" ng-click="main.checkout()">Checkout</button>
+            </form>
+        </div>
+    </div>
+    <div ng-if="!checkout.list.length && !main.checkouted" class="row">
+        <div class="col-md-12 card pt-3 pb-3 text-center">
+            <div>
+                <p>Belum ada buku yang ditambahkan.</p>
+                <a href="#/" class="btn btn-primary">Kembali Berbelanja</a>
+            </div>
+        </div>
+    </div>
+    <div ng-if="main.checkouted">
+        <div class="text-center text-center">
+            <h2>Checkout Success!</h2>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+@import "mixins";
+@import "variable";
+
+.book-checkout {
+    margin-bottom: 16px;
+
+    a {
+        text-decoration: none;
+        color: $color-dark;
+    }
+
+    img {
+        object-position: center;
+        object-fit: cover;
+        height: 170px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        display: block;
+    }
+
+    h5 {
+        @include line-clamp(1);
+    }
+}
+
+.checkout__no-item {
+    width: 100%;
+    padding-top: 20px;
+}

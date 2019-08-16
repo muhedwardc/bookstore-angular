@@ -1,0 +1,14 @@
+<div ng-controller="ViewController as view">
+    <div class="row">
+        <div class="col-md-5">
+            <img src="{{ view.book.gambar }}" onerror="this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT79VFiIQHdxL5w8RM8t41Ec8rGuxksuXZN-mdvs0LujztybzqI'">
+        </div>
+        <div class="col-md-7">
+            <h2>{{ view.book.judul }}</h2>
+            <p class="mb-0">oleh: {{ view.book.author }}</p>
+            <h5 class="mb-3">{{ view.book.harga | rupiah }}</h5>
+            <p>{{ view.book.deskripsi }}</p>
+            <button class="btn btn-success" ng-click="main.addToCart(view.book)">Buy</button>
+        </div>
+    </div>
+</div>

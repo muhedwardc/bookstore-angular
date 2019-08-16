@@ -1,0 +1,7 @@
+<div class="row" ng-controller="BookController as book">
+    <div ng-if="book.list.length" class="col-md-3 mb-4 p-2" ng-repeat="item in book.list">
+        <div book-item></div>
+    </div>
+    <p ng-if="book.list !== null && !book.list.length">Buku kosong.</p>
+    <p ng-if="book.error && book.list == null">Tidak dapat memuat data.</p>
+</div>

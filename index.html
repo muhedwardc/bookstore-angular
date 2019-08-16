@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="Bookstore">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bookstore</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- <link rel="stylesheet" href="dist/style.min.css"></link> -->
+</head>
+<body ng-controller="MainController as main">
+    <nav class="navbar navbar-light bg-light fixed-top">
+        <a class="navbar-brand" href="#/">Bookstore</a>
+        <div class="checkout">
+            <a href="#/checkout" class="btn btn-light">
+                Checkout <span class="badge badge-success">{{ cart_count }}</span>
+            </a>
+        </div>
+    </nav>
+    <div class="container pt-4">
+        <div ng-view></div>
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script src='https://code.angularjs.org/1.5.5/angular-route.min.js'></script>
+    <script src='js/app.js'></script>
+    <!-- <script src='dist/app.min.js'></script> -->
+    <script src='js/routes.js'></script>
+    <script src='js/controllers/MainController.js'></script>
+    <script src='js/controllers/BookController.js'></script>
+    <script src='js/controllers/ViewController.js'></script>
+    <script src='js/controllers/CheckoutController.js'></script>
+    <script src="js/services/BookService.js"></script>
+    <script src="js/services/CheckoutService.js"></script>
+    <script src="js/filter.js"></script>
+</body>
+</html>
